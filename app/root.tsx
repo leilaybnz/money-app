@@ -5,6 +5,8 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import "@fontsource-variable/manrope";
+import styles from "./styles/root.module.css";
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -15,7 +17,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className={styles.body}>
         {children}
         <ScrollRestoration />
         <Scripts />
