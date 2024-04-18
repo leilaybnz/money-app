@@ -1,3 +1,17 @@
 .container {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 80px 1fr 1fr;
+  padding: 8% 8%;
+  grid-gap: 28px;
+}
+
+.cardsContainer {
+  display: grid;
+}
+
+.title {
+  text-align: center;
+  font-size: 22px;
+  margin: 0px;
 }
