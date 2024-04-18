@@ -1,0 +1,27 @@
+.container {
+  background-color: rgb(75, 91, 155);
+  color: white;
+  border-radius: 4px;
+  padding: 0px 20px;
+}
+
+.title {
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin: 12px 2px;
+  font-size: 16px;
+}
+
+.divider {
+  color: white;
+}
+
+.list {
+  padding: 0px 4px;
+  list-style-type: none;
+  font-size: 14px;
+}
+
+.list li {
+  padding: 2px 0px;
+}
