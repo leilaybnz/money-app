@@ -1,14 +1,14 @@
 import TotalValue from "./TotalValue";
-import { Savings } from "~/types";
+import { Money } from "~/types";
 
 interface TotalValueSectionProps {
-  savings: Savings;
+  money: Money[];
 }
 
-export default function TotalValueSection({ savings }: TotalValueSectionProps) {
+export default function TotalValueSection({ money }: TotalValueSectionProps) {
   return (
     <main>
-      <TotalValue savings={savings} />
+      <TotalValue money={money} />
     </main>
   );
 }
