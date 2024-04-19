@@ -1,12 +1,17 @@
 import MyInvestments from "./MyInvestments";
 import OtherInvestments from "./OtherInvestments";
 import styles from "../styles/sidebar.module.css";
+import { Share } from "~/types";
 
-export default function Sidebar() {
+interface SidebarProps {
+  shares: Share[];
+}
+
+export default function Sidebar({ shares }: SidebarProps) {
   return (
     <aside className={styles.aside}>
-      <MyInvestments />
-      <OtherInvestments />
+      <MyInvestments shares={shares} />
+      <OtherInvestments shares={shares} />
     </aside>
   );
 }
