@@ -1,4 +1,3 @@
-import styles from "../styles/totalValueSection.module.css";
 import TotalValue from "./TotalValue";
 import { Savings } from "~/types";
 
@@ -8,7 +7,7 @@ interface TotalValueSectionProps {
 
 export default function TotalValueSection({ savings }: TotalValueSectionProps) {
   return (
-    <main className={styles.container}>
+    <main>
       <TotalValue savings={savings} />
     </main>
   );
