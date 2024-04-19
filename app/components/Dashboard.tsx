@@ -1,25 +1,20 @@
-import { Savings } from "~/types";
+import { Money, Share } from "~/types";
 import styles from "../styles/dashboard.module.css";
 import Sidebar from "./Sidebar";
 import TotalValueSection from "./TotalValueSection";
 
-// const share: Share = {
-//   name: "Coca-Cola",
-//   currentValue: 200,
-//   quantity: 400,
-//   price: 20,
-// };
+interface DashboardProps {
+  money: Money;
+  shares: Share;
+}
 
-const savings: Savings = {
-  name: "ARS",
-  quantity: 1000000,
-};
-
-export default function Dashboard() {
+export default function Dashboard({ money, shares }: DashboardProps) {
   return (
     <main className={styles.container}>
-      <Sidebar />
-      <TotalValueSection savings={savings} />
+      <Sidebar shares={shares} />
+      {/* <pre>{JSON.stringify(money, null, 2)}</pre>
+      <pre>{JSON.stringify(shares, null, 2)}</pre> */}
+      <TotalValueSection money={money} />
       {/* <ShareView share={share} /> */}
     </main>
   );
