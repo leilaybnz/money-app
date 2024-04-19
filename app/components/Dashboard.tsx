@@ -1,7 +1,7 @@
 import { Savings } from "~/types";
 import styles from "../styles/dashboard.module.css";
 import Sidebar from "./Sidebar";
-import TotalValue from "./TotalValue";
+import TotalValueSection from "./TotalValueSection";
 
 // const share: Share = {
 //   name: "Coca-Cola",
@@ -19,7 +19,7 @@ export default function Dashboard() {
   return (
     <main className={styles.container}>
       <Sidebar />
-      <TotalValue savings={savings} />
+      <TotalValueSection savings={savings} />
       {/* <ShareView share={share} /> */}
     </main>
   );
