@@ -1,9 +1,17 @@
-import styles from "../styles/valorTotal.module.css";
+import { Savings } from "~/types";
+import styles from "../styles/totalValue.module.css";
 
-export default function TotalValue() {
+interface TotalValueProps {
+  savings: Savings;
+}
+
+export default function TotalValue({ savings }: TotalValueProps) {
   return (
     <section className={styles.container}>
-      <h2 className={styles.title}>Valor total cartera: AR$200.000</h2>
+      <h2 className={styles.title}>
+        Valor total cartera: {savings.name}
+        {" " + savings.quantity}
+      </h2>
       <img src="../../public/mock.png" alt="grafico" className={styles.img} />
     </section>
   );
