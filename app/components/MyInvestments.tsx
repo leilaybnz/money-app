@@ -1,22 +1,12 @@
 import { Link } from "@remix-run/react";
 import styles from "../styles/card.module.css";
+import { Share } from "~/types";
 
-const shares = [
-  {
-    id: "1",
-    name: "Bonos Coca-Cola",
-    amount: "200",
-  },
-  { id: "2", name: "Bonos Coca-Cola", amount: "200" },
-  {
-    id: "3",
-    name: "Bonos Coca-Cola",
-    amount: "200",
-  },
-  { id: "4", name: "Bonos Coca-Cola", amount: "200" },
-];
+interface MyInvestmentsProps {
+  shares: Share[];
+}
 
-export default function MyInvestments() {
+export default function MyInvestments({ shares }: MyInvestmentsProps) {
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>Mis inversiones</h3>
@@ -25,11 +15,11 @@ export default function MyInvestments() {
         {shares.map((share) => (
           <Link
             to={"/${share.id}"}
-            key={share.id}
+            key={share.name}
             className={`${styles.item} ${styles.activeLink}`}
           >
             <li>
-              {share.name}: <span>{share.amount}</span>
+              {share.name}: <span>{share.quantityOwned}</span>
             </li>
           </Link>
         ))}
