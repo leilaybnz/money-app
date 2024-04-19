@@ -1,6 +1,10 @@
 import styles from "../styles/actionCard.module.css";
 
-export default function ActionCard({ action }) {
+interface ActionCardProps {
+  action: string;
+}
+
+export default function ActionCard({ action }: ActionCardProps) {
   return (
     <section className={styles.container}>
       <input type="number" min={0} className={styles.input} />{" "}

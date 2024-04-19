@@ -5,7 +5,7 @@
   grid-template-rows: 1fr;
   padding: 2% 10%;
   border-radius: 4px;
-  background-color: rgb(75, 91, 155);
+  background-color: #1b346f;
   color: white;
 }
 
@@ -17,6 +17,7 @@
 
 .input {
   margin-right: 6px;
+  font-size: 16px;
 }
 
 .input::-webkit-outer-spin-button,
@@ -32,7 +33,6 @@
 .button {
   background-color: transparent;
   color: white;
-  /* border: 1px solid rgba(75, 91, 155, 1); */
   border: 1px solid white;
   border-radius: 5px;
   text-transform: uppercase;
@@ -41,4 +41,12 @@
   text-align: center;
   cursor: pointer;
   font-weight: 500;
+}
+
+.button:hover {
+  background-color: #5e6cae;
+}
+
+.button:active {
+  background-color: #475797;
 }
