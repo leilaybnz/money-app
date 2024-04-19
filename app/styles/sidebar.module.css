@@ -1,0 +1,6 @@
+.aside {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 40px;
+    padding: 20% 0%;
+  }
