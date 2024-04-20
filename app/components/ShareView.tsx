@@ -11,10 +11,10 @@ export default function ShareView({ share }: ShareViewProps) {
   return (
     <section className={styles.container}>
       <h3 className={styles.title}>Acciones {share.name}</h3>
-      <ValueCard share={share} />
+      <ValueCard />
       <section className={styles.cardsContainer}>
-        <ActionCard action="Comprar" />
-        <ActionCard action="Vender" />
+        <ActionCard action="Comprar" share={share} />
+        <ActionCard action="Vender" share={share} />
       </section>
     </section>
   );
