@@ -12,9 +12,7 @@ export default function Dashboard({ money, shares }: DashboardProps) {
   return (
     <main className={styles.container}>
       <Sidebar shares={shares} />
-      {/* <pre>{JSON.stringify(money, null, 2)}</pre>
-      <pre>{JSON.stringify(shares, null, 2)}</pre> */}
-      <TotalValueSection money={money} />
+      <TotalValueSection money={money} shares={shares} />
       {/* <ShareView share={share} /> */}
     </main>
   );
