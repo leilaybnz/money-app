@@ -11,9 +11,12 @@ export default function ValueCard({ share }: ValueCardProps) {
       <h4 className={styles.title}>Valores</h4>
       <hr className={styles.divider} />
       <ul className={styles.list}>
-        <li>Cantidad: {share.quantity} unidades</li>
-        <li>Cotizacion: AR$ {share.price}/unidad</li>
-        <li>Valor actual: AR$ {share.currentValue}</li>
+        <li>Cantidad: 20 unidades</li>
+        <li>
+          Cotizacion: {share.currency}
+          {share.price}/unidad
+        </li>
+        <li>Valor actual: AR$ 200</li>
       </ul>
     </section>
   );
