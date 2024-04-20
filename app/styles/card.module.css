@@ -26,17 +26,34 @@
   list-style-type: none;
 }
 
-.item {
-  display: flex;
-  justify-content: space-between;
-  padding: 4px 0px;
+.link {
   text-decoration: none;
   color: #299df5;
   font-weight: 500;
 }
 
-.item:hover {
+.link:hover {
   color: #7e75f0;
+}
+
+.link:active {
+  color: #5b35f5;
+  font-weight: 600;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 4px 0px;
+}
+
+.paragraph {
+  justify-self: start;
+  margin: 0px;
+}
+
+.span {
+  justify-self: end;
 }
 
 .activeLink:active {
