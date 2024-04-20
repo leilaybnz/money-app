@@ -1,0 +1,25 @@
+.table {
+  border: 1px solid #1b346f;
+  width: 40vw;
+  border-collapse: collapse;
+}
+
+.head {
+  color: green;
+  text-align: center;
+  border: 1px solid #1b346f;
+}
+
+.heading {
+  text-align: left;
+  border: 1px solid #1b346f;
+}
+
+.data {
+  color: blue;
+  text-align: right;
+  border: 1px solid #1b346f;
+}
+
+.row {
+}
