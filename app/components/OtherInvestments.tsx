@@ -16,10 +16,11 @@ export default function OtherInvestments({ shares }: OtherInvestmentsProps) {
           <Link
             to={"/${share.id}"}
             key={share.name}
-            className={`${styles.item} ${styles.activeLink}`}
+            className={`${styles.link} ${styles.activeLink}`}
           >
-            <li>
-              {share.name}: <span>{share.currentValue}</span>
+            <li className={styles.item}>
+              <p className={styles.paragraph}>{share.name}:</p>{" "}
+              <span className={styles.span}>{share.currency}{share.price}/unidad</span>
             </li>
           </Link>
         ))}
