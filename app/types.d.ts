@@ -1,8 +1,8 @@
 export interface Share {
   name: string;
-  currentValue: number;
   quantityOwned: number;
   price: number;
+  currency: string;
 }
 
 export interface Money {
