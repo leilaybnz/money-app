@@ -15,5 +15,5 @@ export async function loader() {
 
 export default function Index() {
   const { money, shares } = useLoaderData<typeof loader>();
-  return <Dashboard />;
+  return <Dashboard money={money} shares={shares} />;
 }
