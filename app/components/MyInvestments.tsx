@@ -1,9 +1,8 @@
 import { Link } from "@remix-run/react";
 import styles from "../styles/card.module.css";
-import { Money, Share } from "~/types";
+import { Share } from "~/types";
 
 interface MyInvestmentsProps {
-  money: Money[];
   shares: Share[];
 }
 
@@ -21,7 +20,7 @@ export default function MyInvestments({ shares }: MyInvestmentsProps) {
         </Link>
         {shares.map((share) => (
           <Link
-            to={"/${share.id}"}
+            to={`/${share.name}`}
             key={share.name}
             className={`${styles.link} ${styles.activeLink}`}
           >

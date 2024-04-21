@@ -14,7 +14,7 @@ export default function OtherInvestments({ shares }: OtherInvestmentsProps) {
       <ul className={styles.list}>
         {shares.map((share) => (
           <Link
-            to={"/${share.id}"}
+            to={`/${share.name}`}
             key={share.name}
             className={`${styles.link} ${styles.activeLink}`}
           >
