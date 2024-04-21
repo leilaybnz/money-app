@@ -26,5 +26,18 @@ export const api = {
 
       return data.data;
     },
+    getShare: async (shareName: string) => {
+      const response = await fetch(
+        `${baseUrl}/savingsAccount/shares/${shareName}`
+      );
+
+      if (!response.ok) {
+        throw new Error("Could not get share data.");
+      }
+
+      const data = (await response.json()) as { data: Share };
+
+      return data.data;
+    },
   },
 };
