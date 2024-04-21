@@ -33,7 +33,7 @@ export default function Table({ money, shares }: TableProps) {
               {share.currency}
               {share.price}
             </td>
-            <td className={styles.data}>{share.quantityOwned}</td>
+            <td className={styles.data}>{share.quantityOwned} unidades</td>
           </tr>
         ))}
       </tbody>
