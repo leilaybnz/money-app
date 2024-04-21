@@ -1,19 +1,18 @@
-import { Money, Share } from "~/types";
+import { Share } from "~/types";
 import styles from "../styles/dashboard.module.css";
 import Sidebar from "./Sidebar";
-import TotalValueSection from "./TotalValueSection";
 
 interface DashboardProps {
-  money: Money;
-  shares: Share;
+  children: React.ReactNode;
+  shares: Share[];
 }
 
-export default function Dashboard({ money, shares }: DashboardProps) {
+export default function Dashboard({ children, shares }: DashboardProps) {
   return (
     <main className={styles.container}>
       <Sidebar shares={shares} />
-      <TotalValueSection money={money} shares={shares} />
-      {/* <ShareView share={share} /> */}
+      {/* <pre>{JSON.stringify(money, null, 2)}</pre> */}
+      {children}
     </main>
   );
 }
