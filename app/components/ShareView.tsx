@@ -1,7 +1,8 @@
 import { Share } from "~/types";
 import styles from "../styles/shareView.module.css";
-import ActionCard from "./BuyCard";
+import BuyCard from "./BuyCard";
 import ValueCard from "./ValueCard";
+import SellCard from "./SellCard";
 
 interface ShareViewProps {
   share: Share;
@@ -14,8 +15,8 @@ export default function ShareView({ share }: ShareViewProps) {
       <h3 className={styles.title}>Acciones {share.name}</h3>
       <ValueCard share={share} />
       <section className={styles.cardsContainer}>
-        <ActionCard share={share} />
-        <ActionCard share={share} />
+        <BuyCard share={share} />
+        <SellCard share={share} />
       </section>
     </section>
   );
