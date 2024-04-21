@@ -9,7 +9,7 @@
   letter-spacing: 1px;
   font-weight: 600;
   margin: 12px 2px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .divider {
@@ -19,9 +19,10 @@
 .list {
   padding: 0px 4px;
   list-style-type: none;
-  font-size: 14px;
 }
 
 .list li {
   padding: 2px 0px;
+  font-size: 18px;
+  font-weight: 100;
 }
