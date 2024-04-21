@@ -1,12 +1,11 @@
 import { Share } from "~/types";
 import styles from "../styles/actionCard.module.css";
 
-interface ActionCardProps {
-  action: string;
+interface CardProps {
   share: Share;
 }
 
-export default function ActionCard({ action, share }: ActionCardProps) {
+export default function SellCard({ share }: CardProps) {
   return (
     <section className={styles.container}>
       <input type="number" min={0} className={styles.input} />{" "}
@@ -15,7 +14,7 @@ export default function ActionCard({ action, share }: ActionCardProps) {
         = {share.currency}
         {share.price}{" "}
       </span>
-      <button className={styles.button}>{action}</button>
+      <button className={styles.button}>Vender</button>
     </section>
   );
 }
