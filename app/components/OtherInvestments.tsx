@@ -25,8 +25,7 @@ export default function OtherInvestments({ shares }: OtherInvestmentsProps) {
                 <p className={styles.paragraph}>{share.name}:</p>{" "}
                 <span className={styles.span}>
                   {share.currency}
-                  {formatMoney(share.price)}
-                  unidad
+                  {formatMoney(share.price)}/unidad
                 </span>
               </li>
             </Link>
