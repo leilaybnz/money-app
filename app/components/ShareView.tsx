@@ -11,7 +11,6 @@ interface ShareViewProps {
 export default function ShareView({ share }: ShareViewProps) {
   return (
     <section className={styles.container}>
-      {/* <pre>{JSON.stringify(share, null, 2)}</pre> */}
       <h3 className={styles.title}>Acciones {share.name}</h3>
       <ValueCard share={share} />
       <section className={styles.cardsContainer}>
