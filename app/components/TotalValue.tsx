@@ -1,6 +1,7 @@
 import { Money, Share } from "~/types";
 import styles from "../styles/totalValue.module.css";
 import Table from "./Table";
+import { formatMoney } from "~/utils";
 
 interface TotalValuesProps {
   money: Money[];
@@ -12,7 +13,7 @@ export default function TotalValues({ money, shares }: TotalValuesProps) {
     <section className={styles.container} key={money.currency}>
       <h2 className={styles.title}>
         Valor total cartera: {money.currency}
-        {" " + money.amount}
+        {formatMoney(money.amount)}
       </h2>
       <Table money={money} shares={shares} />
     </section>
