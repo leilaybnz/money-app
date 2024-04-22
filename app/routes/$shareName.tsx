@@ -32,7 +32,6 @@ export async function loader({ params }: LoaderFunctionArgs) {
 }
 
 export async function action({ request, params }: ActionFunctionArgs) {
-  console.log("action");
   if (!params.shareName) {
     throw new Response(null, {
       status: 404,
@@ -52,7 +51,14 @@ export async function action({ request, params }: ActionFunctionArgs) {
       });
     }
 
-    await api.savingsAccount.buyShares(params.shareName, parseInt(amount));
+    const status = await api.savingsAccount.buyShares(
+      params.shareName,
+      parseInt(amount)
+    );
+
+    if (status.status === "FAILED") {
+      return json({ error: status.error });
+    }
 
     return redirect("/");
   }
