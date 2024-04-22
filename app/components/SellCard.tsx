@@ -25,7 +25,7 @@ export default function SellCard({ share }: CardProps) {
           setAmount(parseInt(event.currentTarget.value));
         }}
       />{" "}
-      <input hidden name="_type" value="sell" />
+      <input hidden name="_type" value="sell" readOnly />
       <span className={styles.span}>
         {" "}
         = {share.currency}
