@@ -19,7 +19,7 @@ export async function loader() {
 export default function Index() {
   const { money, shares } = useLoaderData<typeof loader>();
   return (
-    <Dashboard shares={shares}>
+    <Dashboard shares={shares} money={money}>
       <TotalValueSection money={money} shares={shares} />
     </Dashboard>
   );
