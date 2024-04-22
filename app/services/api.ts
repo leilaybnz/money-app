@@ -39,5 +39,51 @@ export const api = {
 
       return data.data;
     },
+    buyShares: async (shareName: string, amount: number) => {
+      const response = await fetch(
+        `${baseUrl}/savingsAccount/shares/${shareName}/buy`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        return { status: "FAILED", error: errorData.data.error } as const;
+      }
+
+      (await response.json()) as { status: "OK" };
+
+      return { status: "OK" } as const;
+    },
+    sellShares: async (shareName: string, amount: number) => {
+      const response = await fetch(
+        `${baseUrl}/savingsAccount/shares/${shareName}/sell`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        return { status: "FAILED", error: errorData.data.error } as const;
+      }
+
+      (await response.json()) as { status: "OK" };
+
+      return { status: "OK" } as const;
+    },
   },
 };
