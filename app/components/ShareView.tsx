@@ -11,7 +11,7 @@ interface ShareViewProps {
 export default function ShareView({ share }: ShareViewProps) {
   return (
     <section className={styles.container}>
-      <h3 className={styles.title}>Acciones {share.name}</h3>
+      <h3 className={styles.title}>{share.name}</h3>
       <ValueCard share={share} />
       <section className={styles.cardsContainer}>
         <BuyCard share={share} />
