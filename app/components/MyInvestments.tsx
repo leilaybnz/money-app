@@ -34,7 +34,8 @@ export default function MyInvestments({ shares, money }: MyInvestmentsProps) {
               <li className={styles.item}>
                 <p className={styles.paragraph}>{share.name}:</p>{" "}
                 <span className={styles.span}>
-                  {share.quantityOwned} unidades
+                  {share.quantityOwned}{" "}
+                  {share.quantityOwned === 1 ? "unidad" : "unidades"}
                 </span>
               </li>
             </Link>
