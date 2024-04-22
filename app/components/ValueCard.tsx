@@ -1,5 +1,6 @@
 import { Share } from "~/types";
 import styles from "../styles/valueCard.module.css";
+import { formatMoney } from "~/utils";
 
 interface ValueCardProps {
   share: Share;
@@ -18,8 +19,7 @@ export default function ValueCard({ share }: ValueCardProps) {
         </li>
         <li>
           Valor actual: {share.currency}
-          {share.price}
-          {/**price x quantity owned */}
+          {formatMoney(share.price * share.quantityOwned)}
         </li>
       </ul>
     </section>
