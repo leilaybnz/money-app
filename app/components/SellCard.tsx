@@ -3,6 +3,7 @@ import styles from "../styles/actionCard.module.css";
 import { Form, useActionData } from "@remix-run/react";
 import { useState } from "react";
 import { action } from "~/routes/$shareName";
+import { formatMoney } from "~/utils";
 
 interface CardProps {
   share: Share;
@@ -28,7 +29,7 @@ export default function SellCard({ share }: CardProps) {
       <span className={styles.span}>
         {" "}
         = {share.currency}
-        {Number.isNaN(amount) ? 0 : amount * share.price}
+        {formatMoney(Number.isNaN(amount) ? 0 : amount * share.price)}
       </span>
       <button className={styles.button} type="submit">
         Vender
