@@ -15,7 +15,7 @@ export default function ValueCard({ share }: ValueCardProps) {
         <li>Cantidad: {share.quantityOwned} unidades</li>{" "}
         <li>
           Cotizacion: {share.currency}
-          {share.price}/unidad
+          {formatMoney(share.price)}/unidad
         </li>
         <li>
           Valor actual: {share.currency}
