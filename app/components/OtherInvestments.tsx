@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react";
 import styles from "../styles/card.module.css";
 import { Share } from "~/types";
+import { formatMoney } from "~/utils";
 
 interface OtherInvestmentsProps {
   shares: Share[];
@@ -24,7 +25,8 @@ export default function OtherInvestments({ shares }: OtherInvestmentsProps) {
                 <p className={styles.paragraph}>{share.name}:</p>{" "}
                 <span className={styles.span}>
                   {share.currency}
-                  {share.price}/unidad
+                  {formatMoney(share.price)}
+                  unidad
                 </span>
               </li>
             </Link>
