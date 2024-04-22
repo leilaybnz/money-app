@@ -12,18 +12,23 @@ export default function OtherInvestments({ shares }: OtherInvestmentsProps) {
       <h3 className={styles.title}>Otras inversiones</h3>
       <hr className={styles.divider} />
       <ul className={styles.list}>
-        {shares.map((share) => (
-          <Link
-            to={`/${share.name}`}
-            key={share.name}
-            className={`${styles.link} ${styles.activeLink}`}
-          >
-            <li className={styles.item}>
-              <p className={styles.paragraph}>{share.name}:</p>{" "}
-              <span className={styles.span}>{share.currency}{share.price}/unidad</span>
-            </li>
-          </Link>
-        ))}
+        {shares
+          .filter((share) => share.quantityOwned === 0)
+          .map((share) => (
+            <Link
+              to={`/${share.name}`}
+              key={share.name}
+              className={`${styles.link} ${styles.activeLink}`}
+            >
+              <li className={styles.item}>
+                <p className={styles.paragraph}>{share.name}:</p>{" "}
+                <span className={styles.span}>
+                  {share.currency}
+                  {share.price}/unidad
+                </span>
+              </li>
+            </Link>
+          ))}
       </ul>
     </div>
   );
