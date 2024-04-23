@@ -6,7 +6,7 @@ import { formatMoney } from "~/utils";
 interface TotalValuesProps {
   money: Money[];
   shares: Share[];
-  fullAmount;
+  fullAmount: number;
 }
 
 export default function TotalValues({
