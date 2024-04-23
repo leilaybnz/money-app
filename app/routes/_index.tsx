@@ -14,7 +14,6 @@ export async function loader() {
     api.savingsAccount.getShares(),
     api.savingsAccount.getFullAmount(),
   ]);
-  console.log('f', fullAmount);
   return json({ money, shares, fullAmount });
 }
 
