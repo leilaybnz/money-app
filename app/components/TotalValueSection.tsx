@@ -4,15 +4,17 @@ import { Money, Share } from "~/types";
 interface TotalValueSectionProps {
   money: Money[];
   shares: Share[];
+  fullAmount: any;
 }
 
 export default function TotalValueSection({
   money,
   shares,
+  fullAmount
 }: TotalValueSectionProps) {
   return (
     <main>
-      <TotalValue money={money} shares={shares} />
+      <TotalValue money={money} shares={shares} fullAmount={fullAmount}/>
     </main>
   );
 }

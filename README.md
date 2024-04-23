@@ -48,6 +48,7 @@ npm run dev
 | --------------- | ----------- | ----------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | getSavings      | GET         | http://localhost:5000/savingsAccount/                       | Obtiene nuestros ahorros con su respectiva moneda.                                                 |
 | getShares       | GET         | http://localhost:5000/savingsAccount/shares                 | Obtiene todas las acciones y bonos, tanto las propias como las cuales en las que podemos invertir. |
+| getFullAmount   | GET         | http://localhost:5000/savingsAccount/fullAmount             | Obtiene el total de nuestra caja de ahorros sumado al valor de nuestros bonos o acciones           |
 | getShare        | GET         | http://localhost:5000/savingsAccount/shares/:shareName      | Obtiene una acción o bono en particular.                                                           |
 | buyShares       | POST        | http://localhost:5000/savingsAccount/shares/:shareName/buy  | Nos permite comprar una acción o bono.                                                             |
 | sellShares      | POST        | http://localhost:5000/savingsAccount/shares/:shareName/sell | Nos permite vender una acción o bono.                                                              |

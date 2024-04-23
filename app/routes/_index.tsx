@@ -9,18 +9,24 @@ export const meta: MetaFunction = () => {
 };
 
 export async function loader() {
-  const [money, shares] = await Promise.all([
+  const [money, shares, fullAmount] = await Promise.all([
     api.savingsAccount.getMoney(),
     api.savingsAccount.getShares(),
+    api.savingsAccount.getFullAmount(),
   ]);
-  return json({ money, shares });
+  console.log('f', fullAmount);
+  return json({ money, shares, fullAmount });
 }
 
 export default function Index() {
-  const { money, shares } = useLoaderData<typeof loader>();
+  const { money, shares, fullAmount } = useLoaderData<typeof loader>();
   return (
     <Dashboard shares={shares} money={money}>
-      <TotalValueSection money={money} shares={shares} />
+      <TotalValueSection
+        money={money}
+        shares={shares}
+        fullAmount={fullAmount}
+      />
     </Dashboard>
   );
 }

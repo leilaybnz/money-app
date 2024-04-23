@@ -39,6 +39,17 @@ export const api = {
 
       return data.data;
     },
+    getFullAmount: async () => {
+      const response = await fetch(`${baseUrl}/savingsAccount/shares`);
+
+      if (!response.ok) {
+        throw new Error("Could not get account data.");
+      }
+
+      const data = (await response.json()) as { data: any };
+
+      return data.data;
+    },
     buyShares: async (shareName: string, amount: number) => {
       const response = await fetch(
         `${baseUrl}/savingsAccount/shares/${shareName}/buy`,
