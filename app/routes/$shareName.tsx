@@ -57,7 +57,7 @@ export async function action({ request, params }: ActionFunctionArgs) {
     );
 
     if (status.status === "FAILED") {
-      return json({ error: status.error });
+      return json({ error: status.error, type: "buy" });
     }
 
     return redirect("/");
@@ -77,7 +77,7 @@ export async function action({ request, params }: ActionFunctionArgs) {
     );
 
     if (status.status === "FAILED") {
-      return json({ error: status.error });
+      return json({ error: status.error, type: "sell" });
     }
 
     return redirect("/");
