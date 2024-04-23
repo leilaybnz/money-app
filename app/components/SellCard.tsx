@@ -20,7 +20,7 @@ export default function SellCard({ share }: CardProps) {
         name="amount"
         min={0}
         className={styles.input}
-        value={amount}
+        value={amount.toString()}
         onChange={(event) => {
           setAmount(parseInt(event.currentTarget.value));
         }}
@@ -34,7 +34,7 @@ export default function SellCard({ share }: CardProps) {
       <button className={styles.button} type="submit">
         Vender
       </button>
-      {actionData?.error && (
+      {actionData?.error && actionData.type === "sell" && (
         <span className={styles.error}>{actionData.error}</span>
       )}
     </Form>
